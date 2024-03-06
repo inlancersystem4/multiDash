@@ -1,8 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+* {
+    font-family: "Inter", sans-serif;
+}
+
+.main--layout {
+    @apply w-full h-dvh overflow-x-hidden overflow-y-auto flex items-stretch gap-0 px-3
+}
 
 
+.main--asidebar {
+    @apply h-full overflow-hidden sticky top-0 bg-black bg-opacity-10 flex flex-col p-2.5 gap-2.5 rounded-xl shadow-xl backdrop-blur-xl
+}
 
+.main--asidebar .link {
+    @apply min-w-12 min-h-12 max-w-12 max-h-12 bg-white flex items-center shadow-lg justify-center rounded-full transition-colors hover:bg-theme-color-1 focus:bg-theme-color-1 outline-none ease-in-out duration-150
+}
+
+.main--asidebar .link svg path {
+    @apply stroke-black
+}
+
+.main--asidebar .link:hover svg path,
+.main--asidebar .link:focus svg path {
+    @apply stroke-white
+}
+
+.main--asidebar .link span {
+    @apply hidden
+}

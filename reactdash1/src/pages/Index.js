@@ -3,7 +3,9 @@ import Layout from '../layout/Default';
 const Index = () => {
     return (
         <Layout>
-            index page
+            <p>
+                index page
+            </p>
         </Layout>
     )
 }
