@@ -15,11 +15,20 @@
 
 
 .main--asidebar {
-    @apply h-full overflow-hidden sticky top-0 bg-black bg-opacity-10 flex flex-col p-2.5 gap-2.5 rounded-xl shadow-xl backdrop-blur-xl
+    @apply h-full overflow-hidden sticky top-0 bg-black bg-opacity-10 flex flex-col justify-between p-2.5 gap-2.5 rounded-xl shadow-xl backdrop-blur-xl
 }
 
 .main--asidebar .link {
-    @apply min-w-12 min-h-12 max-w-12 max-h-12 bg-white flex items-center shadow-lg justify-center rounded-full transition-colors hover:bg-theme-color-1 focus:bg-theme-color-1 outline-none ease-in-out duration-150
+    @apply min-w-12 min-h-12 max-w-12 max-h-12 bg-white flex items-center shadow-lg justify-center border border-solid border-transparent rounded-full transition-colors hover:bg-theme-color-1 focus:bg-theme-color-1 outline-none ease-in-out duration-150
+}
+
+.main--asidebar .link.active {
+    @apply bg-theme-color-1 border-black
+}
+
+.main--asidebar .link.active svg path,
+.main--asidebar .link.active svg path {
+    @apply stroke-white
 }
 
 .main--asidebar .link svg path {
@@ -32,5 +41,21 @@
 }
 
 .main--asidebar .link span {
-    @apply hidden
+    @apply hidden text-base capitalize
+}
+
+.main--asidebar.asidebar--active {
+    @apply w-full max-w-60
+}
+
+.main--asidebar.asidebar--active .link {
+    @apply min-w-full min-h-full max-w-full max-h-full py-1.5 px-4 gap-2 rounded-md justify-start
+}
+
+.main--asidebar.asidebar--active .link svg {
+    @apply w-6 h-6
+}
+
+.main--asidebar.asidebar--active .link span {
+    @apply block
 }
